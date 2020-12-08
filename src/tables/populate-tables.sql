@@ -42,7 +42,21 @@ VALUES ('Performance', 8),
 GO
 
 INSERT INTO tblOrganization (OrganizationName, OrganizationDesc)
-VALUES ('Marketing', 'Team responsible for outreach and growth'),
-  ('Development', 'Responsible for the development of the product.'),
-  ('Legal', 'Handles all legal responsibilities.');
+VALUES ('Health Insurance', 'Deals with providing health insurance and coverage plans for American Individuals'),
+  ('Banking', 'A banking service to safeguard money of customers for the world. '),
+  ('Consulting Services', 'B2B management consulting for finance companies.');
 GO
+
+INSERT INTO tblDepartment
+VALUES((SELECT OrganizationID FROM tblOrganization WHERE OrganizationName LIKE 'Health Insurance'), 'Marketing', 'Deals with the outreach of product to the general public'),
+((SELECT OrganizationID FROM tblOrganization WHERE OrganizationName LIKE 'Health Insurance'), 'Development', 'Deals with producing and maintaining tech applications.'),
+((SELECT OrganizationID FROM tblOrganization WHERE OrganizationName LIKE 'Health Insurance'), 'Legal', 'Deals legal and lawsuit activities for the company.'),
+((SELECT OrganizationID FROM tblOrganization WHERE OrganizationName LIKE 'Health Insurance'), 'Finance', 'Responsible for maintaining financial assets and liabilities of the company.'),
+((SELECT OrganizationID FROM tblOrganization WHERE OrganizationName LIKE 'Banking'), 'Marketing', 'Deals with the outreach of product to the general public'),
+((SELECT OrganizationID FROM tblOrganization WHERE OrganizationName LIKE 'Banking'), 'Development', 'Deals with producing and maintaining tech applications.'),
+((SELECT OrganizationID FROM tblOrganization WHERE OrganizationName LIKE 'Banking'), 'Legal', 'Deals legal and lawsuit activities for the company.'),
+((SELECT OrganizationID FROM tblOrganization WHERE OrganizationName LIKE 'Banking'), 'Finance', 'Responsible for maintaining financial assets and liabilities of the company.'),
+((SELECT OrganizationID FROM tblOrganization WHERE OrganizationName LIKE 'Consulting Services'), 'Marketing', 'Deals with the outreach of product to the general public'),
+((SELECT OrganizationID FROM tblOrganization WHERE OrganizationName LIKE 'Consulting Services'), 'Development', 'Deals with producing and maintaining tech applications.'),
+((SELECT OrganizationID FROM tblOrganization WHERE OrganizationName LIKE 'Consulting Services'), 'Legal', 'Deals legal and lawsuit activities for the company.'),
+((SELECT OrganizationID FROM tblOrganization WHERE OrganizationName LIKE 'Consulting Services'), 'Finance', 'Responsible for maintaining financial assets and liabilities of the company.');
