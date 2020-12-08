@@ -33,7 +33,8 @@ VALUES ('Hired', 'A person was hired to the company'),
   ('Salary Raise', 'Increase in paycheck'),
   ('Promotion', 'Employee moves up in hierarchy and recieves more responsibility'),
   ('Demotion', 'Employee moves down in hierarchy and recieves less responsibility/more management'),
-  ('Transfer Location', 'Employee transfered to another office location');
+  ('Transfer Location', 'Employee transfered to another office location'),
+  ('Escalation', 'When there has been a complaint raised for an employee');
 GO
 
 
