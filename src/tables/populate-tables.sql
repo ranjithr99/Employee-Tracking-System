@@ -36,9 +36,11 @@ GO
 
 
 INSERT INTO tblRating (RatingName, RatingNumeric)
-VALUES ('Performance', 8),
-  ('Performance', 10),
-  ('Performance', 6.5);
+VALUES ('Performance', 1),
+    ('Performance', 2),
+    ('Performance', 3),
+    ('Performance', 4),
+    ('Performance', 5);
 GO
 
 INSERT INTO tblOrganization (OrganizationName, OrganizationDesc)
